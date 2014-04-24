@@ -1,4 +1,4 @@
-package com.senac;
+package Sistema;
 
 import java.util.Scanner;
 
