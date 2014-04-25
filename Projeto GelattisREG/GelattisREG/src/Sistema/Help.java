@@ -12,6 +12,7 @@ public class Help {
 		
 	public void imprimirLoginEfetuado(){
 		System.out.println("Login efetuado com SUCESSO");
+		System.err.println("CAIXA LIBERADO");
 	}
 	
 	public void imprimirLoginNaoEfetuado(){
