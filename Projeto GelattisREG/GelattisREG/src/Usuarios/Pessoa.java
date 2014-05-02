@@ -1,6 +1,6 @@
 package Usuarios;
 
-import Sistema.Help;
+import TesteSistema.Help;
 
 public class Pessoa {
 	

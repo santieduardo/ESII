@@ -12,13 +12,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 import Usuarios.Gerente;
 import Usuarios.Operador;
 
-public class Tela {
+public class TelaLogin {
 
 	JFrame janela;
 	JPanel painelLogin, painelBotoes, painelSelecaoFunc;
@@ -32,7 +33,7 @@ public class Tela {
 	Operador operador;
 	Gerente gerente;
 
-	public Tela() {
+	public TelaLogin() {
 		instanciarElementos();
 		janela.getContentPane().setLayout(new BorderLayout());
 
@@ -51,7 +52,7 @@ public class Tela {
 		lblCodigo = new JLabel("Código:");
 		lblSenha = new JLabel("Senha:");
 		txtCodigo = new JTextField();
-		txtSenha = new JTextField();
+		txtSenha = new JPasswordField();
 		btnOK = new JButton("OK");
 		btnCancelar = new JButton("Cancelar");
 		painelLogin = new JPanel();
@@ -106,7 +107,7 @@ public class Tela {
 	}
 
 	public static void main(String[] args) {
-		new Tela();
+		new TelaLogin();
 	}
 
 	private class EventosBotoes implements ActionListener {
@@ -119,15 +120,7 @@ public class Tela {
 					System.exit(0);
 				}
 
-				// TODO verificar se é operador ou gerente que foi selecionado no radioButton
-				// TODO verificar com os usuarios de teste
-				// TODO criar a classe TratadorBotoes()
-				// TODO lançar e implementar os eventos dos botoes para classe
-				// TratadorBotoes()
-				if (nomeBotao.equals("btnOK")) {
-					codigo = Integer.parseInt(txtCodigo.getText());
-					senha = Integer.parseInt(txtSenha.getText());
-
+				if (nomeBotao.equals("btnOK")) {					
 					if (rdbOperador.isSelected()) {
 						isOperadorSelecionado();
 					}
@@ -139,7 +132,9 @@ public class Tela {
 					else{
 						JOptionPane.showMessageDialog(null,"Selecione seu cargo");
 					}
-
+					
+					codigo = Integer.parseInt(txtCodigo.getText());
+					senha = Integer.parseInt(txtSenha.getText());
 				}
 			}
 
