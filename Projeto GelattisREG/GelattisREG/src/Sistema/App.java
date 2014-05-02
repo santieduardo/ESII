@@ -25,7 +25,7 @@ public class App {
 			help.solicitarUsuario();
 			codigo = sc.nextInt();
 			help.solicitarSenha();
-			senha = sc.nextInt();			
+			senha = sc.nextInt();
 			operador.verificarLogin(codigo, senha);
 			break;
 

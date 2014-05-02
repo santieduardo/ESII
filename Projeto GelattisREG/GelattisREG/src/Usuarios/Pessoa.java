@@ -14,6 +14,10 @@ public class Pessoa {
 		this.senha = senha;
 	}
 	
+	public Pessoa(){
+		
+	}
+	
 	public void setNome(String valor){
 		this.nome = valor;
 	}

@@ -6,4 +6,8 @@ public class Gerente extends Pessoa{
 		super(nome, codigo, senha);
 	}
 
+	public Gerente(){
+		super();
+	}
+	
 }
